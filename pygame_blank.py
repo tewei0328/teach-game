@@ -5,7 +5,7 @@ pg.init()
 #設定視窗
 width, height = 640, 480                      
 screen = pg.display.set_mode((width, height)) 
-pg.display.set_caption("Sean's game")        
+pg.display.set_caption("First Game")        
 
 #建立畫布bg
 bg = pg.Surface(screen.get_size())
