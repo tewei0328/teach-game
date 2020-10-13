@@ -1,24 +1,3 @@
-import sys, time
-import random
-
-import pygame
-from pygame.locals import Color, QUIT, MOUSEBUTTONDOWN, USEREVENT, USEREVENT
-
-WINDOW_WIDTH = 800
-WINDOW_HEIGHT = 600
-WHITE = (255, 255, 255)
-IMAGEWIDTH = 300
-IMAGEHEIGHT = 200
-FPS = 60
-
-def get_random_position(widow_width, window_height, image_width, image_height):
-    random_x = random.randint(image_width, widow_width - image_width)
-    random_y = random.randint(image_height, window_height - image_height)
-
-    return random_x, random_y
-
-
-# init mosquito random position
 class Mosquito(pygame.sprite.Sprite):
     def __init__(self, width, height, random_x, random_y, widow_width, window_height):
         super().__init__()
@@ -42,8 +21,10 @@ def main():
     reload_mosquito_event = USEREVENT + 1
     pygame.time.set_timer(reload_mosquito_event, 300)
     points = 0
-    my_font = pygame.font.SysFont(None, 30)
-    my_hit_font = pygame.font.SysFont(None, 40)
+    #my_font = pygame.font.SysFont(None, 30)
+    #my_hit_font = pygame.font.SysFont(None, 40)
+    my_font = pygame.font.SysFont('arial', 30)
+    my_hit_font = pygame.font.SysFont('arial', 40)    
     hit_text_surface = None
     main_clock = pygame.time.Clock()
 
@@ -88,3 +69,4 @@ def main():
 
 if __name__ == '__main__':    
     main()
+
