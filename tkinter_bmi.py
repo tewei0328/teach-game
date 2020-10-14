@@ -29,7 +29,7 @@ header_label.pack()
 
 height_frame = tk.Frame(window)
 height_frame.pack(side=tk.TOP)
-height_label = tk.Label(height_frame, text='身高（m）')
+height_label = tk.Label(height_frame, text='身高（cm）')
 height_label.pack(side=tk.LEFT)
 height_entry = tk.Entry(height_frame)
 height_entry.pack(side=tk.LEFT)
